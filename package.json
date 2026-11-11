@@ -1,8 +1,9 @@
+
 {
   "name": "modcraft-studio",
   "version": "0.2.0",
-  "description": "ModCraft Studio - Minecraft Java texture and model workspace",
-  "main": "src/main.js",
+  "description": "ModCraft Studio - Minecraft texture and model workspace",
+  "main": "main.js",
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder --win nsis"
@@ -14,9 +15,23 @@
   "build": {
     "appId": "pl.modcraftstudio.app",
     "productName": "ModCraft Studio",
-    "directories": { "output": "release" },
-    "files": ["src/**/*", "package.json"],
-    "win": { "target": "nsis" },
-    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true }
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "renderer.js",
+      "style.css",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   }
 }

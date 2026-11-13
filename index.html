@@ -16,7 +16,7 @@
 <button class="nav" data-view="particles">✧ Cząsteczki</button>
 <button class="nav" data-view="icons">▣ Generator ikon</button>
 <button class="nav" data-view="resources">▤ Paczka zasobów</button>
-<div class="side-note"><b>Alpha 0.2</b><p>Podstawowe narzędzia edycji tekstur są aktywne. Pozostałe pracownie są oznaczone jako planowane.</p></div></aside>
+<div class="side-note"><b>Alpha 0.3</b><p>Edytor tekstur i podstawowy edytor modeli 3D. Pozostałe pracownie są rozwijane.</p></div></aside>
 <main>
 <section id="textureView" class="view">
 <div class="view-head"><div><h1>Edytor tekstur</h1><p>Twórz tekstury pikselowe do przedmiotów, bloków i modeli.</p></div>
@@ -34,12 +34,14 @@
 <div class="canvas-panel"><div class="canvas-toolbar"><span id="canvasLabel">Tekstura 16 × 16</span><span>Lewy przycisk myszy: rysuj</span></div><div class="canvas-wrap"><canvas id="paintCanvas" width="512" height="512"></canvas></div><div class="hint">Wskazówka: wiadro wypełnia sąsiadujący obszar o tym samym kolorze. Ctrl+Z cofa operację.</div></div>
 <div class="right-panel"><h3>WARSTWY</h3><div id="layers"><div class="layer active">◉ Warstwa 1</div></div><button id="addLayer">＋ Dodaj warstwę</button><h3>PALETA</h3><div class="swatches" id="swatches"></div><button id="samplePalette">Dodaj aktualny kolor</button><h3>USTAWIENIA</h3><label>Przezroczystość pędzla <input type="range" id="opacity" min="10" max="100" value="100"></label></div>
 </div></section>
-<section id="modelView" class="view hidden"><div class="view-head"><div><h1>Model 3D</h1><p>Podstawowy podgląd brył i elementów modelu.</p></div></div><div class="placeholder"><div class="cube">▧</div><h2>Pracownia modeli 3D</h2><p>Podgląd i edycja geometrii 3D zostaną rozbudowane w kolejnej wersji.</p><span class="status">W przygotowaniu</span></div></section>
+<section id="modelView" class="view hidden"><div class="view-head"><div><h1>Edytor modeli 3D</h1><p>Dodawaj części, ustawiaj ich pozycję, rozmiar i kolor. Przeciągaj widok, aby obracać model.</p></div><div class="model-actions"><button id="addCube3d" class="primary">＋ Dodaj kostkę</button><button id="exportModel3d">Eksportuj model JSON</button></div></div><div id="modelEditorRoot"></div></section>
 <section id="blockView" class="view hidden"><div class="view-head"><div><h1>Tekstura bloku</h1><p>Projektowanie sześciu ścian bloku Minecraft.</p></div></div><div class="placeholder"><h2>Edytor sześciu ścian</h2><p>W kolejnej wersji: osobne tekstury góry, dołu, przodu, tyłu i boków oraz podgląd 3D.</p><span class="status">W przygotowaniu</span></div></section>
 <section id="armorView" class="view hidden"><div class="placeholder"><h2>Edytor modeli zbroi</h2><p>Hełmy, napierśniki, nagolenniki i buty.</p><span class="status">W przygotowaniu</span></div></section>
 <section id="particlesView" class="view hidden"><div class="placeholder"><h2>Edytor cząsteczek</h2><p>Efekty magii, iskry, dymu i eksplozji.</p><span class="status">W przygotowaniu</span></div></section>
 <section id="iconsView" class="view hidden"><div class="placeholder"><h2>Generator ikon</h2><p>Ikony przedmiotów i bloków z podglądem ekwipunku.</p><span class="status">W przygotowaniu</span></div></section>
 <section id="resourcesView" class="view hidden"><div class="placeholder"><h2>Kreator paczek zasobów</h2><p>Tworzenie struktury resource packa i eksport zasobów.</p><span class="status">W przygotowaniu</span></div></section>
-</main></div><footer><span>ModCraft Studio Alpha 0.2</span><span id="statusText">Gotowy</span><span>Minecraft Java Edition</span></footer>
+</main></div><footer><span>ModCraft Studio Alpha 0.3</span><span id="statusText">Gotowy</span><span>Minecraft Java Edition</span></footer>
 <script src="renderer.js"></script>
+<script src="palette-controls.js"></script>
+<script src="model3d.js"></script>
 </body></html>
